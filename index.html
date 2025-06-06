@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=You&background=random" alt="Profile" class="profile-img">
+                    <span>You</span>
+                </div>
+                <button class="new-chat-btn">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+            </div>
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <i class="fas fa-comment"></i>
+                    <span>General Chat</span>
+                </div>
+                <div class="chat-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Team Discussion</span>
+                </div>
+                <div class="chat-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Support Group</span>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="chat-info">
+                    <img src="https://ui-avatars.com/api/?name=Group&background=random" alt="Group" class="profile-img">
+                    <div>
+                        <h3>General Chat</h3>
+                        <p>5 participants</p>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button><i class="fas fa-search"></i></button>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="messages" id="messages">
+                <!-- Messages will appear here -->
+                <div class="message received">
+                    <img src="https://ui-avatars.com/api/?name=Alex&background=random" alt="Alex" class="profile-img">
+                    <div class="message-content">
+                        <div class="message-info">
+                            <span class="sender">Alex</span>
+                            <span class="time">10:30 AM</span>
+                        </div>
+                        <p>Hey everyone! How's it going?</p>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <div class="message-info">
+                            <span class="sender">You</span>
+                            <span class="time">10:32 AM</span>
+                        </div>
+                        <p>I'm doing great! Working on a new project.</p>
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=You&background=random" alt="You" class="profile-img">
+                </div>
+            </div>
+
+            <div class="message-input">
+                <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                <input type="text" placeholder="Type a message..." id="messageInput">
+                <button class="send-btn" id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
